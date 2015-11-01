@@ -27,7 +27,7 @@ class PanelSwitcher(GObject.Object, Gedit.WindowActivatable):
 	def on_key_press_event(self, window, event):
 		key = Gdk.keyval_name(event.keyval)
 
-		if event.state & Gdk.ModifierType.CONTROL_MASK and key in ('Tab'):
+		if event.state & Gdk.ModifierType.MOD1_MASK and key in ('W'):
 			active_view = window.get_active_view()
 
 			if active_view.has_focus():
